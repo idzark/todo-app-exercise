@@ -1,0 +1,16 @@
+<div class="todos">
+  <div class="todos__controls">
+    <app-todo-controls 
+      (add)="onAddTodo()" 
+      (remove)="onRemoveTodo()" 
+      (clear)="onClearAll()">
+    </app-todo-controls>
+  </div>
+
+<ul class="todos__list">
+  <li class="todos__item" *ngFor="let todo of todos">
+    <app-todo [todo]="todo"></app-todo>
+  </li>
+</ul>
+</div>
+

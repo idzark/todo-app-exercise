@@ -1,0 +1,54 @@
+$green: #4CAF50;
+$red: #FF5252;
+$grey: #FF9800;
+$text-color: #fff;
+
+.controls {
+  text-align: center;
+}
+
+.button {
+  color: $text-color;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  padding: 12px 24px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+
+  &--green {
+    background-color: $green;
+
+    &:hover {
+      background-color: lighten($green, 10%);
+    }
+  }
+
+  &--red {
+    background-color: $red;
+
+    &:hover {
+      background-color: lighten($red, 10%);
+    }
+  }
+
+  &--grey {
+    background-color: $grey;
+
+    &:hover {
+      background-color: lighten($grey, 10%);
+    }
+  }
+
+  &--control:not(:last-child) {
+    @media screen and (min-width: 400px) {
+      margin-right: 10px;
+    }
+  }
+
+  &--control:not(:first-child) {
+    margin-top: 10px;
+  }
+}
